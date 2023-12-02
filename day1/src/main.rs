@@ -97,7 +97,7 @@ fn parse_num_map(map: HashMap<usize, Vec<usize>>) -> i32 {
         let first_i = indices.first().unwrap();
         let last_i = indices.last().unwrap();
 
-        // Compare values without cloning with * (dereferencing)
+        // Compare values without cloning by dereferencing
         if *first_i < first_num.1 {
             first_num = (key, *first_i);
         }
