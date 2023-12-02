@@ -4,11 +4,8 @@ fn main() {
     let contents = fs::read_to_string("input.txt")
     .expect("file should have been read");
     
-    // Get lines from file an return iterator
-    let lines  = contents.lines();
-
-    // Reduce result of each line into final sum
-    let result = lines.fold(0, |acc: i32, x: &str| { 
+    // Get lines from file (returns iterator), reduce result of each line into final sum
+    let result = contents.lines().fold(0, |acc: i32, x: &str| { 
         //// PART 1
         // acc + get_number_from_line_part_1(x) 
         //// PART 2
