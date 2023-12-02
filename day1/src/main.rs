@@ -2,9 +2,8 @@ use std::{fs, collections::HashMap};
 
 fn main() {
     let contents = fs::read_to_string("input.txt")
-    .expect("Should have been able to read the file");
+    .expect("file should have been read");
     
-    // Give explicit type since type inference does not yield unique possibility
     // Get lines from file an return iterator
     let lines  = contents.lines();
 
